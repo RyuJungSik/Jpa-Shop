@@ -32,6 +32,7 @@ public void 회원가입() throws Exception {
     //when
     Long saveId = memberService.join(member);
     //then
+    System.out.println("memberService.findMemebers() : " + memberService.findMemebers().get(0).getName());
     Assert.assertEquals(member, memberRepository.findOne(saveId));
 }
 
